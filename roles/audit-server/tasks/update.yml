@@ -1,0 +1,12 @@
+# Update system with latest devkit version
+---
+
+  - name: update system packages
+    apt: upgrade=yes update-cache=yes
+
+  - name: download devkit repo
+    git: repo=https://github.com/LandRegistry/infrastructure-puppet-devkit.git
+         dest=/etc/puppet/modules/devkit depth=1
+
+  - name: apply devkit puppet module
+    command: puppet apply /etc/puppet/modules/devkit/tests/optional.pp

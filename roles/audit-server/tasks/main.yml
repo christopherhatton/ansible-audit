@@ -1,0 +1,4 @@
+---
+
+  - include: update.yml
+  - include: elasticsearch.yml

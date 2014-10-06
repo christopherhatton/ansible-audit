@@ -1,0 +1,7 @@
+#audit.yml
+---
+
+  - hosts: audit
+    sudo: yes
+    roles:
+      - role: audit-server
