@@ -1,13 +1,13 @@
 # Install Elasticsearch
 ---
 
-  - name: add elasticsearch apt repo
-    apt_repository: repo='deb http://packages.elasticsearch.org/elasticsearch/1.3/debian stable main'
-                    state=present
-
   - name: add repo gpg key
     apt_key: url=http://packages.elasticsearch.org/GPG-KEY-elasticsearch
              state=present
+
+  - name: add elasticsearch apt repo
+    apt_repository: repo='deb http://packages.elasticsearch.org/elasticsearch/1.3/debian stable main'
+                    state=present
 
   - name: install elasticsearch
     apt: name=elasticsearch state=present
