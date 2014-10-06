@@ -11,3 +11,6 @@
 
   - name: install elasticsearch
     apt: name=elasticsearch state=present
+
+  - name: ensure elasticsearch is running
+    service: name=elasticsearch state=running enabled=yes
